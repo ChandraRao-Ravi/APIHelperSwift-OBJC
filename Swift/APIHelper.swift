@@ -41,8 +41,8 @@ class APIHelper: NSObject {
             // Your completion handler code here
             let responseString = String(data: data!, encoding: .utf8)
             
-            if  let dict1 = responseString?.convertToDictionary() as? NSDictionary {
-                successHandler(dict1)
+            if  let dictData = responseString?.convertToDictionary() as? NSDictionary {
+                successHandler(dictData)
             } else {
                 failureHandler("Some error occured")
             }
